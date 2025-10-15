@@ -8,4 +8,4 @@
 ## 以下是Random Forest Regressor在缺失值填補方法的Public Score (n estimators = 500)
 | KNN | train dropna, test 用眾數/平均數 |
 | --- | --- |
-| 0.05441 | 0.05038 |
+| 0.05038 | 0.05441 |
