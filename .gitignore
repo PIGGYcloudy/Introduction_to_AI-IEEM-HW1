@@ -1,2 +1,5 @@
 .venv*
-*_v*.csv
+*.csv
+!submission_sample.csv
+!test.csv
+!train.csv
