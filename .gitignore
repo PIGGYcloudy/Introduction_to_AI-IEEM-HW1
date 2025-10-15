@@ -3,3 +3,4 @@
 !submission_sample.csv
 !test.csv
 !train.csv
+*.joblib
