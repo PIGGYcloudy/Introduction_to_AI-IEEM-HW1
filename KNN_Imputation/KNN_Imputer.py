@@ -54,14 +54,11 @@ def imputer(n_neighbors, train_df, test_df, writefile=False, outputfolder='./'):
     final_train_features = df_restored.iloc[:train_rows]
     final_test_features = df_restored.iloc[train_rows:]
 
-    # 關鍵！重設兩邊的索引，讓它們都能從 0 開始對齊
-    # drop=True 表示不要把舊的 index 變成一個新的 column
     final_train_features.reset_index(drop=True, inplace=True)
     final_test_features.reset_index(drop=True, inplace=True)
     train_ID.reset_index(drop=True, inplace=True)
     test_ID.reset_index(drop=True, inplace=True)
 
-    # 現在可以安全地合併
     train_imputed_df = pd.concat([train_ID, final_train_features], axis=1)
     train_imputed_df['Burn Rate'] = train_target
 
